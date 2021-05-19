@@ -451,7 +451,7 @@ function mouseOverHandler(e){
 	cset = getCursorPosition(e);
 	res = checkObjectLocation(cset[0],cset[1]);
 	console.log(res);
-	if(res !== false && res < 9) {
+	if(res !== false && res < 8) {
 		mouseOverRegister = res;
 		draw();
 	}else if(res !== false){
@@ -506,6 +506,7 @@ function draw(){
 	
 	canvas = document.getElementById('canvas');
 	canvas.width = canvas.width;
+	canvas.getContext("2d").scale(2,2);
 	draw7segment(500,180); 
 	drawRegisters(internalRegister,outputRegister,375,60);
 
